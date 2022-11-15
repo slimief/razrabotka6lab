@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<style type="text/css">
+html{
+background-color: white;
+}
+</style>
+</head>
+<script type="text/javascript">
+        function Color(){
+            var p = document.getElementById('color');
+            p = p.value;
+            var t = document.documentElement;
+            t.style.backgroundColor = p;
+        }
+
+        function Color2(){
+            var a = parseInt(prompt("Enter R"), 10) || 105,
+            b = parseInt(prompt("Enter G"), 10) || 105,
+            c = parseInt(prompt("Enter B"), 10) || 105;
+            var t = document.documentElement;
+            t.style.backgroundColor= 'rgb(' + a + ',' + b + ',' + c + ')';
+        }
+
+        function Color3(){
+            var p = document.getElementById('color3');
+            p = p.value;
+            var t = document.documentElement;
+            var t = document.getElementById('text3');
+            t.style.color = p;
+        }
+
+        function Color4(){
+            var a = parseInt(prompt("Enter R"), 10) || 105,
+            b = parseInt(prompt("Enter G"), 10) || 105,
+            c = parseInt(prompt("Enter B"), 10) || 105;
+            var t = document.documentElement;
+            var t = document.getElementById('text3');
+            t.style.color = 'rgb(' + a + ',' + b + ',' + c + ')';
+        }
+    
+        function Url(){
+            var p = document.getElementById('url');
+            p = p.value;
+            document.getElementById("ssilka").href= p;
+
+        }
+
+</script>
+<body>
+<input type="text" id="color" placeholder="Фон">
+<input type="button" value="Отправить" onclick="Color()">
+<input type="button" value="RGB" onclick="Color2()">
+
+<h1 id="text3">Текст</h1>
+<h2>Текст, который не имеет id и не будет меняться, пример, как можно изменять только определенный текст</h2>
+<input type="text" id="color3" placeholder="Цвет текста">
+<input type="button" value="Отправить" onclick="Color3()">
+<input type="button" value="RGB" onclick="Color4()">
+
+<h1>Ну типо ссылка</h1>
+<h2><a href="https://google.com" id="ssilka">ССЫЛКА<br></a></h2>
+<p></p>
+<input type="text" id="url" placeholder="Менять ссылку">
+<input type="button" value="Менять" onclick="Url()">
+</body>
+</html>
